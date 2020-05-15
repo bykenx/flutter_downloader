@@ -378,3 +378,8 @@ missing a feature, please raise a ticket on Github. Pull request are also welcom
 [2]: https://developer.apple.com/documentation/foundation/nsurlsessiondownloadtask?language=objc
 [3]: https://medium.com/@guerrix/info-plist-localization-ad5daaea732a
 [4]: https://developer.android.com/training/basics/supporting-devices/languages
+
+
+change log:
+  1. 移除网络判断（国内无法连接到google Captive Portal Server，导致任务无法启动）
+  2. 修改OneTimeWorkRequest的可回退后台任务的时间，因为(MIN_BACKOFF_MILLIS需要大于10mins)[https://developer.android.com/reference/androidx/work/WorkRequest#MIN_BACKOFF_MILLIS]
